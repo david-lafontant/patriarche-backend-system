@@ -5,9 +5,11 @@ one:
   type: 
   file_path: MyString
   user: one
+  article: one
 
 two:
   title: MyString
   type: 
   file_path: MyString
   user: two
+  article: two

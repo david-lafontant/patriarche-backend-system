@@ -14,6 +14,7 @@ class ContentsTest < ApplicationSystemTestCase
     visit contents_url
     click_on "New content"
 
+    fill_in "Article", with: @content.article_id
     fill_in "File path", with: @content.file_path
     fill_in "Title", with: @content.title
     fill_in "Type", with: @content.type
@@ -28,6 +29,7 @@ class ContentsTest < ApplicationSystemTestCase
     visit content_url(@content)
     click_on "Edit this content", match: :first
 
+    fill_in "Article", with: @content.article_id
     fill_in "File path", with: @content.file_path
     fill_in "Title", with: @content.title
     fill_in "Type", with: @content.type

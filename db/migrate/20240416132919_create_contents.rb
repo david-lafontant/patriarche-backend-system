@@ -5,6 +5,7 @@ class CreateContents < ActiveRecord::Migration[7.0]
       t.string :type
       t.string :file_path
       t.references :user, null: false, foreign_key: true
+      t.references :article, null: false, foreign_key: true
 
       t.timestamps
     end

@@ -17,7 +17,7 @@ class ContentsControllerTest < ActionDispatch::IntegrationTest
 
   test "should create content" do
     assert_difference("Content.count") do
-      post contents_url, params: { content: { file_path: @content.file_path, title: @content.title, type: @content.type, user_id: @content.user_id } }
+      post contents_url, params: { content: { article_id: @content.article_id, file_path: @content.file_path, title: @content.title, type: @content.type, user_id: @content.user_id } }
     end
 
     assert_redirected_to content_url(Content.last)
@@ -34,7 +34,7 @@ class ContentsControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "should update content" do
-    patch content_url(@content), params: { content: { file_path: @content.file_path, title: @content.title, type: @content.type, user_id: @content.user_id } }
+    patch content_url(@content), params: { content: { article_id: @content.article_id, file_path: @content.file_path, title: @content.title, type: @content.type, user_id: @content.user_id } }
     assert_redirected_to content_url(@content)
   end
 
