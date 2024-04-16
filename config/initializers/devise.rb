@@ -137,9 +137,9 @@ Devise.setup do |config|
   # confirming their account. For instance, if set to 2.days, the user will be
   # able to access the website for two days without confirming their account,
   # access will be blocked just in the third day.
-  # You can also set it to nil, which will allow the user to access the website
+  # You can also set it to nil, which will allow  the user to access the website
   # without confirming their account.
-  # Default is 0.days, meaning the user cannot access the website without
+  # Default is 0.days, meaning the usercannot access the website without
   # confirming their account.
   # config.allow_unconfirmed_access_for = 2.days
 
@@ -176,7 +176,7 @@ Devise.setup do |config|
 
   # ==> Configuration for :validatable
   # Range for password length.
-  config.password_length = 6..128
+  config.password_length = 12..128
 
   # Email regex used to validate email formats. It simply asserts that
   # one (and only one) @ exists in the given string. This is mainly
