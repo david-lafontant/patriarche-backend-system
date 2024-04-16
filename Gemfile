@@ -74,4 +74,6 @@ group :test do
 
 end
 
-gem 'rubocop'
+gem 'devise', '~> 4.9', '>= 4.9.3'
+
+gem 'rubocop', '>= 1.0', '< 2.0'
