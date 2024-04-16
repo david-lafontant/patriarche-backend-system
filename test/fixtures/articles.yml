@@ -6,7 +6,6 @@ one:
   description: MyText
   texte: MyText
   user: one
-  content: one
 
 two:
   title: MyString
@@ -14,4 +13,3 @@ two:
   description: MyText
   texte: MyText
   user: two
-  content: two
