@@ -1,0 +1,42 @@
+<nav class="navbar navbar-expand-md navbar-light fixed-top" id="navigation" >
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">Fixed navbar</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarCollapse">
+      <ul class="navbar-nav ms-auto mb-2 mb-md-0">
+        <li class="nav-item">
+          <%
+=begin%>
+ <a class="nav-link active" aria-current="page" href="#"></a> 
+<%
+=end%>
+          <%= link_to root_path , class: "nav-link active" do %> 
+       Radio T&eacute;l&eacute; Patriarche
+       <% end %>
+       
+        </li>
+
+        <li class="nav-item">
+          <%= link_to about_path, class: "nav-link"  do %> 
+            A propos de nous
+          <% end %>
+        </li>
+
+        <li class="nav-item">
+          <%= link_to reportages_path , class: "nav-link" do %> 
+            Reportages
+          <% end %>
+        </li>
+
+        <li class="nav-item">
+          <%= link_to newz_path, class: "nav-link" do %>
+            Actuali&eacute;s
+          <% end %>
+        </li> 
+      </ul>
+    </div>
+  </div>
+</nav>
+

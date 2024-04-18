@@ -1,0 +1,27 @@
+
+<div class="container">
+  <div class="row">
+    <div class="col">
+      <h1>Reportages</h1>
+      <div id="reportages">
+        <% @reportages.each do |reportage| %>
+          <section>
+            <h2><%= reportage.title %> </h2>
+            <h3><%= reportage.subtitle %> </h3>
+            <p>
+              <%= reportage.description %>
+            </p>
+            <p>
+              <%= link_to 'Voir plus ...', reportage_path(reportage), class: "more" %>
+            </p>
+          </section>
+        <% end %>
+      </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
