@@ -6,19 +6,37 @@
     </button>
     <div class="collapse navbar-collapse" id="navbarCollapse">
       <ul class="navbar-nav ms-auto mb-2 mb-md-0">
-      <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="#">Radio T&eacute;l&eacute; Patriarche</a>
-        </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">A propos de nous</a> 
+          <%
+=begin%>
+ <a class="nav-link active" aria-current="page" href="#"></a> 
+<%
+=end%>
+          <%= link_to root_path , class: "nav-link active" do %> 
+       Radio T&eacute;l&eacute; Patriarche
+       <% end %>
+       
         </li>
+
         <li class="nav-item">
-          <a class="nav-link" href="#">Actualit&eacute;s</a>
+          <%= link_to about_path, class: "nav-link"  do %> 
+            A propos de nous
+          <% end %>
         </li>
+
         <li class="nav-item">
-          <a class="nav-link" href="#">Articles</a>
+          <%= link_to reportages_path , class: "nav-link" do %> 
+            Reportages
+          <% end %>
+        </li>
+
+        <li class="nav-item">
+          <%= link_to newz_path, class: "nav-link" do %>
+            Actuali&eacute;s
+          <% end %>
         </li> 
       </ul>
     </div>
   </div>
 </nav>
+
