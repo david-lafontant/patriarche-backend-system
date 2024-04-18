@@ -6,8 +6,10 @@ Rails.application.routes.draw do
   devise_for :users
   root 'publics#home'
   get 'about', to: 'publics#about'
-  get 'reportages', to: 'publics#articles'
+  get 'reportages', to: 'publics#reportages'
   get 'newz', to: 'publics#newz'
+  get '/reportages/:id', to: 'publics#show', as: 'reportage'
+
   resources :contents
   resources :articles
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
