@@ -4,6 +4,11 @@ class Ability
   include CanCan::Ability
 
   def initialize(user)
+    can :read, Article, published: true
+
+    return unless user.present?
+
+    can %i[read update], Article, user:
     # Define abilities for the user here. For example:
     #
     #   return unless user.present?
