@@ -1,0 +1,11 @@
+<h1>Reportages</h1>
+
+<div id="reportages">
+  <% @reportages.each do |reportage| %>
+    <%= render reportage %>
+    <p>
+      <%= link_to 'Voir plus ...', reportage_path(reportage) %>
+    </p>
+  <% end %>
+</div>
+</div>
