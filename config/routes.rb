@@ -10,7 +10,6 @@ Rails.application.routes.draw do
   get 'newz', to: 'publics#newz'
   get '/reportages/:id', to: 'publics#show', as: 'reportage'
 
-  resources :articles
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
   # Defines the root path route ("/")
