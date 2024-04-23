@@ -81,12 +81,12 @@ end
 
 gem 'aws-sdk-s3', require: false
 gem 'cancancan'
-gem 'carrierwave'
+# gem 'carrierwave'
 gem 'devise'
 gem 'devise_invitable'
-gem 'kaminari'
-gem 'poppler'
+# gem 'kaminari'
+# gem 'poppler'
 gem 'rubocop'
-gem 'sidekiq'
+# gem 'sidekiq'
 # gem 'simple_form'
-gem 'streamio-ffmpeg', '~> 3.0', '>= 3.0.2'
+# gem 'streamio-ffmpeg', '~> 3.0', '>= 3.0.2'
