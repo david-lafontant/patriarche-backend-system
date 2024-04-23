@@ -83,6 +83,7 @@ gem 'aws-sdk-s3', require: false
 gem 'cancancan'
 gem 'carrierwave'
 gem 'devise'
+gem 'devise_invitable'
 gem 'kaminari'
 gem 'poppler'
 gem 'rubocop'
