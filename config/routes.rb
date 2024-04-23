@@ -1,5 +1,4 @@
 Rails.application.routes.draw do
-  resources :reportages
   # get 'publics/home'
   # get 'publics/about'
   # get 'publics/articles'
