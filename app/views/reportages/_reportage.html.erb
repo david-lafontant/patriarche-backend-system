@@ -1,0 +1,94 @@
+<div class="container" id="<%= dom_id reportage %>">
+  <div class="row">
+  
+  <div class="col">
+    
+  <p>
+    <strong>Title:</strong>
+    <%= reportage.title %>
+  </p>
+
+  <p>
+    <strong>Description:</strong>
+    <%= reportage.description %>
+  </p>
+  
+  
+  </div>
+  </div>
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+
+  <% if reportage.contents.attached? %>
+
+
+  <div class="row">
+    <div class="col">
+    <strong>Contents:</strong>
+    <% reportage.contents.each do |content| %>
+
+    <%if content.image?%>
+
+      <div class="card" style="width: 18rem;">
+
+      <%= image_tag(content, class: "card-img-top", alt: "Card image cap") %>
+  <div class="card-body">
+    <h5 class="card-title"><%= content.filename %></h5>
+    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+
+      <%= link_to content.filename, content %>  </div>
+</div>
+
+
+<%elsif content.video?%>
+
+
+ <div class="embed-responsive embed-responsive-16by9">
+
+  <%= video_tag(url_for(content), class:"embed-responsive-item" , controls: true) %>
+
+</div> 
+
+<h1> gen yon video</h1>
+
+<%elsif content.audio?%>
+
+<%= audio_tag(url_for(content), controls: true)%>
+    <%else%>
+
+
+  <%= link_to content.filename, content %>
+    <%end%>
+
+
+
+    <% end %>
+    </div>
+  </div>
+  <%end%>
+
+
+
+
+
+
+
+
+
+  <p>
+    <strong>User:</strong>
+    <%= reportage.user_id %>
+  </p>
+
+</div>
