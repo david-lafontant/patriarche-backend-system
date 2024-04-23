@@ -7,7 +7,6 @@ Rails.application.routes.draw do
   devise_for :users
   root 'publics#home'
   get 'about', to: 'publics#about'
-  get 'reportages', to: 'publics#reportages'
   get 'newz', to: 'publics#newz'
   get '/reportages/:id', to: 'publics#show', as: 'reportage'
 
