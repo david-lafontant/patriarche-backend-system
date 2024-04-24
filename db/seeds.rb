@@ -3,6 +3,22 @@
 #
 # Examples:
 #
+
+User.destroy_all
+# Course.destroy_all
+# CourseModule.destroy_all
+# Lesson.destroy_all
+# Content.destroy_all
+# Enrollement.destroy_all
+# Grade.destroy_all
+
+# role: 0 = student, 1=instructor, 2=administrator
+User.create!(name: 'administrator', email: 'admin@example.com', password: 'password12345',
+             confirmed_at: DateTime.now)
+
+
+
+
 #   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
 #   Character.create(name: "Luke", movie: movies.first)
 
