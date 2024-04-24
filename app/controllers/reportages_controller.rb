@@ -8,8 +8,7 @@ class ReportagesController < ApplicationController
   end
 
   # GET /reportages/1 or /reportages/1.json
-  def show
-  end
+  def show; end
 
   # GET /reportages/new
   def new
@@ -17,8 +16,7 @@ class ReportagesController < ApplicationController
   end
 
   # GET /reportages/1/edit
-  def edit
-  end
+  def edit; end
 
   # POST /reportages or /reportages.json
   def create

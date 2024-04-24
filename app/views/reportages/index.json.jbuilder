@@ -1,1 +1,1 @@
-json.array! @reportages, partial: "reportages/reportage", as: :reportage
+json.array! @reportages, partial: 'reportages/reportage', as: :reportage
