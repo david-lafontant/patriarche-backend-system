@@ -50,3 +50,7 @@ h1 {
 h1 {
   text-shadow: 0 0 3px #FF0000, 0 0 5px #0000FF;
 }
+
+credit
+button : <https://getcssscan.com/css-buttons-examples> by famera
+slash image: <https://images.rawpixel.com/image_800/czNmcy1wcml2YXRlL3Jhd3BpeGVsX2ltYWdlcy93ZWJzaXRlX2NvbnRlbnQvbHIvdXB3azYxNjkxNDcyLXdpa2ltZWRpYS1pbWFnZS1rb3dyNHp1aC5qcGc.jpg>
