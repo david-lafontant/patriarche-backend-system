@@ -55,7 +55,7 @@ credit
 button : <https://getcssscan.com/css-buttons-examples> by famera
 slash image: <https://images.rawpixel.com/image_800/czNmcy1wcml2YXRlL3Jhd3BpeGVsX2ltYWdlcy93ZWJzaXRlX2NvbnRlbnQvbHIvdXB3azYxNjkxNDcyLXdpa2ltZWRpYS1pbWFnZS1rb3dyNHp1aC5qcGc.jpg>
 
-  <div class="row-fluid">
+  <div class="row">
         <div class="col">
          <div class="card" style="width:18rem;">
           <%= image_tag("emission.jpg", alt: "emission", class: "card-img-top") %>
