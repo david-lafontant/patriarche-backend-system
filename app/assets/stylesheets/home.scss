@@ -78,18 +78,6 @@
 -webkit-mask: var(--mask);
         mask: var(--mask);
         background-color: #682b00;
-#home-direct-section{
-  .logo-container{
-    border-radius: 30% 70% 27% 73% / 98% 2% 98% 2% ;
-    padding: 1.5rem 2.5rem;
-    background-color: #fe8302;
-    img{
-      width: 200px;
-    }
-
-  }
-
-}
 }
 
 .row-fluid:has(#home-about-section) {
