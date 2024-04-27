@@ -5,3 +5,7 @@
 @import './main.css';
 @import './styling.scss';
 @import './home.scss';
+
+body:has(#home-view) {
+  background-color: #ffa500;;
+}
