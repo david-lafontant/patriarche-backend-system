@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+
   root 'publics#home'
   get 'about', to: 'publics#about'
   get 'newz', to: 'publics#newz'
@@ -8,7 +9,7 @@ Rails.application.routes.draw do
   get '/published.emissions/:id', to: 'publics#show_emission'
   devise_for :users
   resources :articles
-  resources :emission_contents
+  resources :media
   resources :emissions
   resources :contact_form, only: %i[new create]
   # get 'published.articles', to: 'publics#publics_articles'
