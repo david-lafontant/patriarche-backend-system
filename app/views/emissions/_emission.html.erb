@@ -14,9 +14,25 @@
     <%= link_to emission.poster.filename, emission.poster if emission.poster.attached? %>
   </p>
 
+
+<%if emission.emission_contents %>
+<h3>yo la</h3>
+  <ul>
+
+  <% emission.emission_contents.each do |item|%>
+   <li> <%= item.title %></li>
+  <% end %>
+
+  </ul>
+  <%end%>
+
   <p>
     <strong>User:</strong>
     <%= emission.user_id %>
   </p>
+
+
+
+
 
 </div>

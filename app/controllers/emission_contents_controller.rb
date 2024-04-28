@@ -13,7 +13,8 @@ class EmissionContentsController < ApplicationController
 
   # GET /emission_contents/new
   def new
-    @emission_content = EmissionContent.new
+    @emissions = Emission.all
+    @emission_options = Emission.all.map{ |u| [ u.title, u.id ] }
   end
 
   # GET /emission_contents/1/edit

@@ -1,15 +1,5 @@
 <%= form_with(model: emission_content) do |form| %>
-  <% if emission_content.errors.any? %>
-    <div style="color: red">
-      <h2><%= pluralize(emission_content.errors.count, "error") %> prohibited this emission_content from being saved:</h2>
 
-      <ul>
-        <% emission_content.errors.each do |error| %>
-          <li><%= error.full_message %></li>
-        <% end %>
-      </ul>
-    </div>
-  <% end %>
 
   <div>
     <%= form.label :title, style: "display: block" %>
@@ -26,15 +16,22 @@
     <%= form.file_field :content %>
   </div>
 
-  <div>
+  <%
+=begin%>
+ <div>
     <%= form.label :user_id, style: "display: block" %>
     <%= form.text_field :user_id %>
-  </div>
+  </div> 
+<%
+=end%>
 
   <div>
     <%= form.label :emission_id, style: "display: block" %>
-    <%= form.text_field :emission_id %>
+     <%= select_tag(:emission_id, options_for_select(@emission_options)) %>
   </div>
+
+
+
 
   <div>
     <%= form.submit %>
