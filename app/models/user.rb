@@ -5,5 +5,6 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable, :confirmable, :lockable
   has_many :articles
   has_many :emissions
-  has_many :emission_contents
+  # has_many :emission_contents
+  has_many :media
 end
