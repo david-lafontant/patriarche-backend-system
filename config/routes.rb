@@ -7,5 +7,4 @@ Rails.application.routes.draw do
   get '/articles/:id', to: 'publics#show', as: 'article'
   resources :contact_form, only: %i[new create]
   devise_for :users
-  resources :reportages
 end
