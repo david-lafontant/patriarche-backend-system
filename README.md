@@ -50,3 +50,33 @@ h1 {
 h1 {
   text-shadow: 0 0 3px #FF0000, 0 0 5px #0000FF;
 }
+
+credit
+button : <https://getcssscan.com/css-buttons-examples> by famera
+slash image: <https://images.rawpixel.com/image_800/czNmcy1wcml2YXRlL3Jhd3BpeGVsX2ltYWdlcy93ZWJzaXRlX2NvbnRlbnQvbHIvdXB3azYxNjkxNDcyLXdpa2ltZWRpYS1pbWFnZS1rb3dyNHp1aC5qcGc.jpg>
+
+  <div class="row">
+        <div class="col">
+         <div class="card" style="width:18rem;">
+          <%= image_tag("emission.jpg", alt: "emission", class: "card-img-top") %>
+          <div class="card-body">
+            <h5 class="card-title">
+                La croix et la banniere
+            </h5>
+  
+            <p class="card-text"> 
+      Do aliquip non minim laboris incididunt ipsum. Labore elit deserunt nulla ut ex 
+      tempor deserunt tempor nostrud ullamco tempor irure ut dolor. Ullamco deserunt ullamco 
+      deserunt commodo ipsum incididunt.        
+            </p> 
+            <p class="card-text"> 
+              <small class="text-muted"> 
+                  Radio tele Patriarche
+              </small> 
+            </p> 
+          </div> 
+      </div> 
+   </div>
+  </div>
+
+shadow class: <https://www.corelangs.com/css/box/curved-shadow.html>

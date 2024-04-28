@@ -1,6 +1,12 @@
 @import 'bootstrap/scss/bootstrap';
 @import 'bootstrap-icons/font/bootstrap-icons';
 @import './colors.scss';
-@import './public_navbar.scss';
-@import './main.css';
-@import './styling.scss';
+@import './about.scss';
+@import './home.scss';
+@import './public.footer.scss';
+@import './public.navigation.scss';
+@import './contact.scss';
+
+body:has(#home-view) {
+  background-color: #ffa500;
+}
