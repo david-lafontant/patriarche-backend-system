@@ -1,5 +1,6 @@
 class EmissionsController < ApplicationController
-  before_action :set_emission, only: %i[ show edit update destroy ]
+  before_action :authenticate_user!
+  before_action :set_emission, only: %i[show edit update destroy]
 
   # GET /emissions or /emissions.json
   def index
@@ -22,10 +23,11 @@ class EmissionsController < ApplicationController
   # POST /emissions or /emissions.json
   def create
     @emission = Emission.new(emission_params)
+    @emission.user = current_user
 
     respond_to do |format|
       if @emission.save
-        format.html { redirect_to emission_url(@emission), notice: "Emission was successfully created." }
+        format.html { redirect_to emission_url(@emission), notice: 'Emission was successfully created.' }
         format.json { render :show, status: :created, location: @emission }
       else
         format.html { render :new, status: :unprocessable_entity }
@@ -38,7 +40,7 @@ class EmissionsController < ApplicationController
   def update
     respond_to do |format|
       if @emission.update(emission_params)
-        format.html { redirect_to emission_url(@emission), notice: "Emission was successfully updated." }
+        format.html { redirect_to emission_url(@emission), notice: 'Emission was successfully updated.' }
         format.json { render :show, status: :ok, location: @emission }
       else
         format.html { render :edit, status: :unprocessable_entity }
@@ -52,19 +54,20 @@ class EmissionsController < ApplicationController
     @emission.destroy
 
     respond_to do |format|
-      format.html { redirect_to emissions_url, notice: "Emission was successfully destroyed." }
+      format.html { redirect_to emissions_url, notice: 'Emission was successfully destroyed.' }
       format.json { head :no_content }
     end
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
-    def set_emission
-      @emission = Emission.find(params[:id])
-    end
 
-    # Only allow a list of trusted parameters through.
-    def emission_params
-      params.require(:emission).permit(:title, :description, :poster, :user_id)
-    end
+  # Use callbacks to share common setup or constraints between actions.
+  def set_emission
+    @emission = Emission.find(params[:id])
+  end
+
+  # Only allow a list of trusted parameters through.
+  def emission_params
+    params.require(:emission).permit(:title, :description, :poster, :user_id)
+  end
 end
