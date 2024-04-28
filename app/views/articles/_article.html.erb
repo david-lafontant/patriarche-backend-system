@@ -1,0 +1,34 @@
+<div id="<%= dom_id article %>">
+  <p>
+    <strong>Title:</strong>
+    <%= article.title %>
+  </p>
+
+  <p>
+    <strong>Subltitle:</strong>
+    <%= article.subltitle %>
+  </p>
+
+  <p>
+    <strong>Description:</strong>
+    <%= article.description %>
+  </p>
+
+  <p>
+    <strong>Contenu:</strong>
+    <%= article.contenu %>
+  </p>
+
+  <p>
+    <strong>Contents:</strong>
+    <% article.contents.each do |content| %>
+      <div><%= link_to content.filename, content %></div>
+    <% end %>
+  </p>
+
+  <p>
+    <strong>User:</strong>
+    <%= article.user_id %>
+  </p>
+
+</div>
