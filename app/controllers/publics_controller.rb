@@ -4,7 +4,11 @@ class PublicsController < ApplicationController
   def about; end
 
   def show
-    @reportage = Article.find(params[:id])
+    @article = Reportage.find(params[:id])
+  end
+
+  def articles
+    @articles = Reportage.all
   end
 
   def newz; end
