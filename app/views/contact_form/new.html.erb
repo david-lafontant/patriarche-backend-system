@@ -1,4 +1,6 @@
-<%= form_with scope: :contact_form, url: contact_form_index_path, method: :post, local: true, class: "container" do |form| %>
+<%
+=begin%>
+ <%= form_with scope: :contact_form, url: contact_form_index_path, method: :post, local: true, class: "container" do |form| %>
   <div class="form-group">
     <%= form.label :name %>
     <%= form.text_field :name, class: "form-control" %>
@@ -17,3 +19,62 @@
   </div>
   <%= form.submit "Submit", class: "btn btn-primary" %>
 <% end %>
+
+
+ 
+<%
+=end%>
+
+<!-- Contact 1 - Bootstrap Brain Component -->
+<section class="bg-light py-5 py-md-5 mt-5">
+  <div class="container">
+    <div class="row justify-content-md-center">
+      <div class="col-12 col-md-10 col-lg-8 col-xl-7 col-xxl-6">
+        <h2 class="mb-4 display-5 text-center">Contactez-nous</h2>
+        <p class="text-secondary mb-5 text-center">Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Pellentesque et neque id ligula mattis commodo.</p>
+        <hr class="w-50 mx-auto mb-5 mb-xl-9 border-dark-subtle">
+      </div>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="row justify-content-lg-center">
+      <div class="col-12 col-lg-9">
+        <div class="gls border rounded shadow-sm overflow-hidden">
+          <%= form_with scope: :contact_form, url: contact_form_index_path, method: :post, local: true, class: "container" do |form| %>
+            <div class="row gy-4 gy-xl-5 p-4 p-xl-5">
+              <div class="col-12">
+                <%= form.label :name %>
+                <%= form.text_field :name, class: "form-control" %>
+              </div>
+              <div class="col-12">
+                <%= form.label :last_name %>
+                <%= form.text_field :last_name, class: "form-control" %>
+              </div>
+              <div class="col-12">
+                <%= form.label :email %>
+                <div class="input-group">
+                  <span class="input-group-text">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-envelope" viewBox="0 0 16 16">
+                      <path d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V4Zm2-1a1 1 0 0 0-1 1v.217l7 4.2 7-4.2V4a1 1 0 0 0-1-1H2Zm13 2.383-4.708 2.825L15 11.105V5.383Zm-.034 6.876-5.64-3.471L8 9.583l-1.326-.795-5.64 3.47A1 1 0 0 0 2 13h12a1 1 0 0 0 .966-.741ZM1 11.105l4.708-2.897L1 5.383v5.722Z" />
+                    </svg>
+                  </span>
+                  <%= form.email_field :email, class: "form-control" %>
+                </div>
+              </div>
+              <div class="col-12">
+                <%= form.label :message %>
+                <%= form.text_area :message, class: "form-control", rows: "3" %>
+              </div>
+              <div class="col-12">
+                <div class="d-grid">
+                  <%= form.submit "Submit", class: "btn btn-primary btn-lg" %>
+                </div>
+              </div>
+            </div>
+           <% end %>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
