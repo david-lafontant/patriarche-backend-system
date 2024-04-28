@@ -1,0 +1,27 @@
+<div id="<%= dom_id emission_content %>">
+  <p>
+    <strong>Title:</strong>
+    <%= emission_content.title %>
+  </p>
+
+  <p>
+    <strong>Description:</strong>
+    <%= emission_content.description %>
+  </p>
+
+  <p>
+    <strong>Content:</strong>
+    <%= link_to emission_content.content.filename, emission_content.content if emission_content.content.attached? %>
+  </p>
+
+  <p>
+    <strong>User:</strong>
+    <%= emission_content.user_id %>
+  </p>
+
+  <p>
+    <strong>Emission:</strong>
+    <%= emission_content.emission_id %>
+  </p>
+
+</div>

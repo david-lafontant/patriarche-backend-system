@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :emission_contents
   resources :emissions
 
   root 'publics#home'

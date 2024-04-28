@@ -1,0 +1,14 @@
+<p style="color: green"><%= notice %></p>
+
+<h1>Emission contents</h1>
+
+<div id="emission_contents">
+  <% @emission_contents.each do |emission_content| %>
+    <%= render emission_content %>
+    <p>
+      <%= link_to "Show this emission content", emission_content %>
+    </p>
+  <% end %>
+</div>
+
+<%= link_to "New emission content", new_emission_content_path %>
