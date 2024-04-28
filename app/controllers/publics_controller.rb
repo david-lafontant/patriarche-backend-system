@@ -3,12 +3,20 @@ class PublicsController < ApplicationController
 
   def about; end
 
-  def show
-    @article = Reportage.find(params[:id])
+  def show_article
+    @article = Article.find(params[:id])
   end
 
-  def articles
-    @articles = Reportage.all
+  def publics_articles
+    @articles = Article.all
+  end
+
+  def show_emission
+    @article = Emission.find(params[:id])
+  end
+
+  def publics_emissions
+    @articles = Emission.all
   end
 
   def newz; end
