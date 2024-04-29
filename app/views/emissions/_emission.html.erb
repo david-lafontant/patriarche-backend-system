@@ -15,11 +15,11 @@
   </p>
 
 
-<%if emission.emission_contents %>
+<%if emission.media %>
 <h3>yo la</h3>
   <ul>
 
-  <% emission.emission_contents.each do |item|%>
+  <% emission.media.each do |item|%>
    <li> <%= item.title %></li>
   <% end %>
 
