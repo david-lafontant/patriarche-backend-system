@@ -4,11 +4,37 @@
 
 <div id="emissions">
   <% @emissions.each do |emission| %>
-    <%= render emission %>
+    <%
+=begin%>
+ <%= render emission %> 
+<%
+=end%>
+<h2><%= emission.title %></h2>
+
+  <p>
+    <strong>Description:</strong>
+    <%= emission.description %>
+  </p>
+
+  <p>
+    <strong>Poster:</strong>
+    <%= link_to emission.poster.filename, emission.poster if emission.poster.attached? %>
+  </p>
+
+
+
+
+
+
+
+
+
+
     <p>
       <%= link_to "Show this emission", emission %>
     </p>
   <% end %>
 </div>
+
 
 <%= link_to "New emission", new_emission_path %>
