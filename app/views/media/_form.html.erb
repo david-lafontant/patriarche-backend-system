@@ -26,29 +26,9 @@
     <%= form.file_field :content %>
   </div>
 
-  <%
-=begin%>
- <div>
-    <%= form.label :user_id, style: "display: block" %>
-    <%= form.text_field :user_id %>
-  </div> 
-<%
-=end%>
-
   <div>
     <%= form.label :emission_id, style: "display: block" %>
-
-
-
- <%
-=begin%>
- <%= form.text_field :emission_id %>  
-<%
-=end%>
-
- <%= form.select(:emission_id , @emission_options) %>
- 
- 
+    <%= form.select(:emission_id , @emission_options) %>
   </div>
 
   <div>
