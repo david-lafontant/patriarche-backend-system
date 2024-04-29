@@ -1,5 +1,6 @@
 class MediaController < ApplicationController
-  before_action :set_medium, only: %i[ show edit update destroy ]
+  before_action :authenticate_user!
+  before_action :set_medium, only: %i[show edit update destroy]
 
   # GET /media or /media.json
   def index
@@ -12,6 +13,7 @@ class MediaController < ApplicationController
 
   # GET /media/new
   def new
+    @emission_options = Emission.all.map { |u| [u.title, u.id] }
     @medium = Medium.new
   end
 
@@ -22,10 +24,11 @@ class MediaController < ApplicationController
   # POST /media or /media.json
   def create
     @medium = Medium.new(medium_params)
+    @medium.user = current_user
 
     respond_to do |format|
       if @medium.save
-        format.html { redirect_to medium_url(@medium), notice: "Medium was successfully created." }
+        format.html { redirect_to medium_url(@medium), notice: 'Medium was successfully created.' }
         format.json { render :show, status: :created, location: @medium }
       else
         format.html { render :new, status: :unprocessable_entity }
@@ -38,7 +41,7 @@ class MediaController < ApplicationController
   def update
     respond_to do |format|
       if @medium.update(medium_params)
-        format.html { redirect_to medium_url(@medium), notice: "Medium was successfully updated." }
+        format.html { redirect_to medium_url(@medium), notice: 'Medium was successfully updated.' }
         format.json { render :show, status: :ok, location: @medium }
       else
         format.html { render :edit, status: :unprocessable_entity }
@@ -52,19 +55,20 @@ class MediaController < ApplicationController
     @medium.destroy
 
     respond_to do |format|
-      format.html { redirect_to media_url, notice: "Medium was successfully destroyed." }
+      format.html { redirect_to media_url, notice: 'Medium was successfully destroyed.' }
       format.json { head :no_content }
     end
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
-    def set_medium
-      @medium = Medium.find(params[:id])
-    end
 
-    # Only allow a list of trusted parameters through.
-    def medium_params
-      params.require(:medium).permit(:title, :description, :content, :user_id, :emission_id)
-    end
+  # Use callbacks to share common setup or constraints between actions.
+  def set_medium
+    @medium = Medium.find(params[:id])
+  end
+
+  # Only allow a list of trusted parameters through.
+  def medium_params
+    params.require(:medium).permit(:title, :description, :content, :user_id, :emission_id)
+  end
 end
