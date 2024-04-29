@@ -8,8 +8,7 @@ class MediaController < ApplicationController
   end
 
   # GET /media/1 or /media/1.json
-  def show
-  end
+  def show; end
 
   # GET /media/new
   def new
@@ -18,8 +17,7 @@ class MediaController < ApplicationController
   end
 
   # GET /media/1/edit
-  def edit
-  end
+  def edit; end
 
   # POST /media or /media.json
   def create

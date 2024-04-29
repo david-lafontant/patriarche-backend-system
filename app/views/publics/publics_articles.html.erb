@@ -1,6 +1,5 @@
 <%
 =begin%>
- 
 <div class="container">
   <div class="row">
     <div class="col">
@@ -19,49 +18,26 @@
           </section>
         <% end %>
       </div>
-      </div>
     </div>
   </div>
-</div> 
+</div>
+</div>
 <%
 =end%>
-
-
-
 <p style="color: green"><%= notice %></p>
-
 <h1>Reportages</h1>
-
 <div id="articles">
   <% @articles.each do |article| %>
-        <p>
-        <strong>Title:</strong>
-        <%= article.title %>
-      </p>
-      <p>
-        <strong>Description:</strong>
-        <%= article.description %>
-      </p>
-
     <p>
-      <%
-=begin%>
- <%= link_to "Show this article", article %> 
-<%
-=end%>
-      <%
-=begin%>
- <%= link_to 'Voir plus ...', article_path(article) %> 
-<%
-=end%>
-                    <%= link_to 'Voir plus ...', un_article_path(article) %>
+      <strong>Title:</strong>
+      <%= article.title %>
+    </p>
+    <p>
+      <strong>Description:</strong>
+      <%= article.description %>
+    </p>
+    <p>
+      <%= link_to 'Voir plus ...', un_article_path(article) %>
     </p>
   <% end %>
 </div>
-
-
-
-
-
-
-

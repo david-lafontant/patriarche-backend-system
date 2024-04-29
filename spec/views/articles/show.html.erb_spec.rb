@@ -1,18 +1,18 @@
 require 'rails_helper'
 
-RSpec.describe "articles/show", type: :view do
+RSpec.describe 'articles/show', type: :view do
   before(:each) do
     assign(:article, Article.create!(
-      title: "Title",
-      subltitle: "Subltitle",
-      description: "MyText",
-      contenu: "MyText",
-      contents: nil,
-      user: nil
-    ))
+                       title: 'Title',
+                       subltitle: 'Subltitle',
+                       description: 'MyText',
+                       contenu: 'MyText',
+                       contents: nil,
+                       user: nil
+                     ))
   end
 
-  it "renders attributes in <p>" do
+  it 'renders attributes in <p>' do
     render
     expect(rendered).to match(/Title/)
     expect(rendered).to match(/Subltitle/)

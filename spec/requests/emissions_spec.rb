@@ -12,94 +12,91 @@ require 'rails_helper'
 # of tools you can use to make these specs even more expressive, but we're
 # sticking to rails and rspec-rails APIs to keep things simple and stable.
 
-RSpec.describe "/emissions", type: :request do
-  
+RSpec.describe '/emissions', type: :request do
   # This should return the minimal set of attributes required to create a valid
   # Emission. As you add validations to Emission, be sure to
   # adjust the attributes here as well.
-  let(:valid_attributes) {
-    skip("Add a hash of attributes valid for your model")
-  }
+  let(:valid_attributes) do
+    skip('Add a hash of attributes valid for your model')
+  end
 
-  let(:invalid_attributes) {
-    skip("Add a hash of attributes invalid for your model")
-  }
+  let(:invalid_attributes) do
+    skip('Add a hash of attributes invalid for your model')
+  end
 
-  describe "GET /index" do
-    it "renders a successful response" do
+  describe 'GET /index' do
+    it 'renders a successful response' do
       Emission.create! valid_attributes
       get emissions_url
       expect(response).to be_successful
     end
   end
 
-  describe "GET /show" do
-    it "renders a successful response" do
+  describe 'GET /show' do
+    it 'renders a successful response' do
       emission = Emission.create! valid_attributes
       get emission_url(emission)
       expect(response).to be_successful
     end
   end
 
-  describe "GET /new" do
-    it "renders a successful response" do
+  describe 'GET /new' do
+    it 'renders a successful response' do
       get new_emission_url
       expect(response).to be_successful
     end
   end
 
-  describe "GET /edit" do
-    it "renders a successful response" do
+  describe 'GET /edit' do
+    it 'renders a successful response' do
       emission = Emission.create! valid_attributes
       get edit_emission_url(emission)
       expect(response).to be_successful
     end
   end
 
-  describe "POST /create" do
-    context "with valid parameters" do
-      it "creates a new Emission" do
-        expect {
+  describe 'POST /create' do
+    context 'with valid parameters' do
+      it 'creates a new Emission' do
+        expect do
           post emissions_url, params: { emission: valid_attributes }
-        }.to change(Emission, :count).by(1)
+        end.to change(Emission, :count).by(1)
       end
 
-      it "redirects to the created emission" do
+      it 'redirects to the created emission' do
         post emissions_url, params: { emission: valid_attributes }
         expect(response).to redirect_to(emission_url(Emission.last))
       end
     end
 
-    context "with invalid parameters" do
-      it "does not create a new Emission" do
-        expect {
+    context 'with invalid parameters' do
+      it 'does not create a new Emission' do
+        expect do
           post emissions_url, params: { emission: invalid_attributes }
-        }.to change(Emission, :count).by(0)
+        end.to change(Emission, :count).by(0)
       end
 
-    
       it "renders a response with 422 status (i.e. to display the 'new' template)" do
         post emissions_url, params: { emission: invalid_attributes }
         expect(response).to have_http_status(:unprocessable_entity)
       end
-    
     end
   end
 
-  describe "PATCH /update" do
-    context "with valid parameters" do
-      let(:new_attributes) {
-        skip("Add a hash of attributes valid for your model")
-      }
+  describe 'PATCH /update' do
+    context 'with valid parameters' do
+      let(:new_attributes) do
+        skip('Add a hash of attributes valid for your model')
+      end
 
-      it "updates the requested emission" do
+      it 'updates the requested emission' do
         emission = Emission.create! valid_attributes
         patch emission_url(emission), params: { emission: new_attributes }
         emission.reload
-        skip("Add assertions for updated state")
+        skip('Add assertions for updated state')
       end
 
-      it "redirects to the emission" do
+      it 'redirects to the emission' do
         emission = Emission.create! valid_attributes
         patch emission_url(emission), params: { emission: new_attributes }
         emission.reload
@@ -107,26 +104,24 @@ RSpec.describe "/emissions", type: :request do
       end
     end
 
-    context "with invalid parameters" do
-    
+    context 'with invalid parameters' do
       it "renders a response with 422 status (i.e. to display the 'edit' template)" do
         emission = Emission.create! valid_attributes
         patch emission_url(emission), params: { emission: invalid_attributes }
         expect(response).to have_http_status(:unprocessable_entity)
       end
-    
     end
   end
 
-  describe "DELETE /destroy" do
-    it "destroys the requested emission" do
+  describe 'DELETE /destroy' do
+    it 'destroys the requested emission' do
       emission = Emission.create! valid_attributes
-      expect {
+      expect do
         delete emission_url(emission)
-      }.to change(Emission, :count).by(-1)
+      end.to change(Emission, :count).by(-1)
     end
 
-    it "redirects to the emissions list" do
+    it 'redirects to the emissions list' do
       emission = Emission.create! valid_attributes
       delete emission_url(emission)
       expect(response).to redirect_to(emissions_url)

@@ -8,8 +8,7 @@ class EmissionsController < ApplicationController
   end
 
   # GET /emissions/1 or /emissions/1.json
-  def show
-  end
+  def show; end
 
   # GET /emissions/new
   def new
@@ -17,8 +16,7 @@ class EmissionsController < ApplicationController
   end
 
   # GET /emissions/1/edit
-  def edit
-  end
+  def edit; end
 
   # POST /emissions or /emissions.json
   def create

@@ -1,1 +1,1 @@
-json.partial! "emissions/emission", emission: @emission
+json.partial! 'emissions/emission', emission: @emission
