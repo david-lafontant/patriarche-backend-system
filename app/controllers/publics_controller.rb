@@ -12,12 +12,10 @@ class PublicsController < ApplicationController
   end
 
   def show_emission
-    @article = Emission.find(params[:id])
+    @emission = Emission.find(params[:id])
   end
 
   def publics_emissions
-    @articles = Emission.all
+    @emissions = Emission.all
   end
-
-  def newz; end
 end
