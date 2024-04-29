@@ -49,7 +49,12 @@
  <%= link_to "Show this article", article %> 
 <%
 =end%>
-      <%= link_to 'Voir plus ...', article_path(article), class: "more" %>
+      <%
+=begin%>
+ <%= link_to 'Voir plus ...', article_path(article) %> 
+<%
+=end%>
+                    <%= link_to 'Voir plus ...', un_article_path(article) %>
     </p>
   <% end %>
 </div>
