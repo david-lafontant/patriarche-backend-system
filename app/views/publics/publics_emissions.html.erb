@@ -1,0 +1,37 @@
+<p style="color: green"><%= notice %></p>
+
+<h1>Emissions</h1>
+
+<div id="emissions">
+  <% @emissions.each do |emission| %>
+<h2><%= emission.title %></h2>
+
+  <p>
+    <strong>Description:</strong>
+    <%= emission.description %>
+  </p>
+
+  <p>
+    <strong>Poster:</strong>
+    <%= link_to emission.poster.filename, emission.poster if emission.poster.attached? %>
+  </p>
+
+
+
+
+
+
+
+
+
+
+    <p>
+      <%
+=begin%>
+ <%= link_to "Show this emission", emission %> 
+<%
+=end%>
+       <%= link_to 'Voir plus ...', une_emission_path(emission) %>
+    </p>
+  <% end %>
+</div>
