@@ -4,18 +4,18 @@ class PublicsController < ApplicationController
   def about; end
 
   def show_article
-    @article = Article.find(params[:id])
+    @l_article = Article.find(params[:id])
   end
 
   def publics_articles
-    @articles = Article.all
+    @les_articles = Article.all
   end
 
   def show_emission
-    @emission = Emission.find(params[:id])
+    @l_emission = Emission.find(params[:id])
   end
 
   def publics_emissions
-    @emissions = Emission.all
+    @les_emissions = Emission.all
   end
 end
