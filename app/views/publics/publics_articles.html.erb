@@ -25,9 +25,9 @@
 <%
 =end%>
 <p style="color: green"><%= notice %></p>
-<h1>Reportages</h1>
+<h1>Article</h1>
 <div id="articles">
-  <% @articles.each do |article| %>
+  <% @les_articles.each do |article| %>
     <p>
       <strong>Title:</strong>
       <%= article.title %>
@@ -38,6 +38,9 @@
     </p>
     <p>
       <%= link_to 'Voir plus ...', un_article_path(article) %>
+      <p>
+      </p>
     </p>
   <% end %>
+  se bon an
 </div>
