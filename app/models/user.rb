@@ -3,5 +3,8 @@ class User < ApplicationRecord
   # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
   devise :invitable, :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable, :confirmable, :lockable
-  has_many :reportages
+  has_many :articles
+  has_many :emissions
+  # has_many :emission_contents
+  has_many :media
 end

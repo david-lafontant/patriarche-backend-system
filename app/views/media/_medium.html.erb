@@ -1,0 +1,27 @@
+<div id="<%= dom_id medium %>">
+  <p>
+    <strong>Title:</strong>
+    <%= medium.title %>
+  </p>
+
+  <p>
+    <strong>Description:</strong>
+    <%= medium.description %>
+  </p>
+
+  <p>
+    <strong>Content:</strong>
+    <%= link_to medium.content.filename, medium.content if medium.content.attached? %>
+  </p>
+
+  <p>
+    <strong>User:</strong>
+    <%= medium.user_id %>
+  </p>
+
+  <p>
+    <strong>Emission:</strong>
+    <%= medium.emission_id %>
+  </p>
+
+</div>

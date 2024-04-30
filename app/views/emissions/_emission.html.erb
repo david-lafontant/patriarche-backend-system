@@ -1,0 +1,34 @@
+<div id="<%= dom_id emission %>">
+  <p>
+    <strong>Title:</strong>
+    <%= emission.title %>
+  </p>
+
+  <p>
+    <strong>Description:</strong>
+    <%= emission.description %>
+  </p>
+
+  <p>
+    <strong>Poster:</strong>
+    <%= link_to emission.poster.filename, emission.poster if emission.poster.attached? %>
+  </p>
+
+
+<%if emission.media %>
+<h3>yo la</h3>
+  <ul>
+
+  <% emission.media.each do |item|%>
+   <li> <%= item.title %></li>
+  <% end %>
+
+  </ul>
+  <%end%>
+
+  <p>
+    <strong>User:</strong>
+    <%= emission.user_id %>
+  </p>
+
+</div>
