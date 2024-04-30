@@ -1,7 +1,7 @@
 <p style="color: green"><%= notice %></p>
 <h1>Emissions</h1>
 <div id="emissions">
-  <% @emissions.each do |emission| %>
+  <% @les_emissions.each do |emission| %>
     <h2><%= emission.title %></h2>
     <p>
       <strong>Description:</strong>
@@ -15,4 +15,5 @@
       <%= link_to 'Voir plus ...', une_emission_path(emission) %>
     </p>
   <% end %>
+  se bon an
 </div>
