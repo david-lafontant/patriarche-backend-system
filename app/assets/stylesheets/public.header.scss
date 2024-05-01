@@ -1,0 +1,30 @@
+#public-header {
+  .site-navbar-top {
+    background-color: $oxford-blue;
+
+    a {
+      text-decoration: none;
+      color: $snow;
+
+      :hover {
+        color: $orange-web;
+      }
+    }
+  }
+
+  .navbar {
+    .navbar-brand {
+      color: $snow;
+      font-weight: 700;
+      font-size: 1.3rem;
+    }
+
+    .nav-item {
+      .nav-link {
+        color: $orange-web;
+        font-weight: 700;
+
+      }
+    }
+  }
+}
