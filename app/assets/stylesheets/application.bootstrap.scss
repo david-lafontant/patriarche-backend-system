@@ -1,6 +1,7 @@
 @import 'bootstrap/scss/bootstrap';
 @import 'bootstrap-icons/font/bootstrap-icons';
-// @import './colors.scss';
+@import './palette.scss';
+@import './public.header.scss';
 
 // body:has(#home-view) {
 //   background-color: #ffa500;
