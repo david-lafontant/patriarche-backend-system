@@ -1,19 +1,24 @@
-<div class="container-fluid" id="home-view">
-  <div class="row">
-    <div class="hero-unit bg-image" id="splash-section" style=" background-color: orange; background-image: url(<%= image_path "splash.webp"%>);
-        height: 100vh; background-repeat: no-repeat; background-position: center center; background-size: cover; background-blend-mode: multiply;">
-      <h1>Radio T&eacute;l&eacute; Patriarche</h1>
-      <p class="tagline">Que l&apos;&eacute;motion soit!</p>
-      <p>
-        <a class="button-73">
+<section class="container-fluid col-xxl-8 px-4 py-5 mt-5 align-items-center border border-danger home-section" style="background-color: orange; background-image: url(<%= image_path "splash.webp"%>);
+background-repeat: no-repeat; background-position: center center; background-size: cover; background-blend-mode: multiply;" id="home-hero">
+  <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
+    <div class="col-lg-6">
+    </div>
+    <div class="col-lg-6 me-auto border border-danger align-items-center">
+      <h1 class="display-5 fw-bold text-body-emphasis lh-1 mb-3">Radio T&eacute;l&eacute; Patriarche</h1>
+      <p class="lead">Que l&apos;&eacute;motion soit!</p>
+      <div class="d-grid gap-4 d-md-flex justify-content-md-start">
+        <button type="button" class="button-89">
           Nos emissions
-        </a>
-        <a class="button-73">
-          En savoir plus...
-        </a>
-      </p>
+        </button>
+        <button class="button-89">
+          En savoir plus&nbsp;...
+        </button>
+      </div>
     </div>
   </div>
+</div>
+</section>
+<div class="container-fluid" id="home-view">
   <div class="row" id="home-direct" >
     <div class="my-5" id="home-direct-section">
       <div class="p-5 text-center">
@@ -71,7 +76,7 @@
         <span class="carousel-control-next-icon" aria-hidden="true"></span>
         <span class="visually-hidden">Next</span>
       </button>
-    </div>
+    </section>
   </div>
 </section>
 </div>
