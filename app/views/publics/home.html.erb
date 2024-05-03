@@ -21,13 +21,13 @@ background-repeat: no-repeat; background-position: center center; background-siz
 <div class="divider-b"></div>
 <section class="bg-dark text-secondary px-4 py-5 text-center" id="home-direct">
   <div class="py-5">
-    <h1 class="display-5 fw-bold text-white">Dark color hero</h1>
+    <h1 class="display-5 fw-bold text-white">T&eacute;l&eacute; Patriarche en directe!</h1>
     <div class="col-lg-6 mx-auto">
-      <iframe width="560" height="315" 
-            src="https://www.youtube.com/embed/NiRIbKwAejk?si=aVXDKGhjpyTntmSI" 
-            title="YouTube video player" frameborder="0" 
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+      <!-- 16:9 aspect ratio -->
+      <div class="embed-responsive embed-responsive-16by9">
+        <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/NiRIbKwAejk?si=aVXDKGhjpyTntmSI" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+            referrerpolicy="strict-origin-when-cross-origin" title="Live news" allowfullscreen></iframe>
+      </div>
     </div>
   </div>
 </section>
@@ -60,9 +60,9 @@ background-repeat: no-repeat; background-position: center center; background-siz
         <%= image_tag("emission.jpg", alt: "emission", class: "bd-placeholder-img w-100 h-100" ) %>
         <div class="container">
           <div class="carousel-caption text-start">
-            <h1>Example headline.</h1>
+            <h1>Emission headline</h1>
             <p class="opacity-75">Some representative placeholder content for the first slide of the carousel.</p>
-            <p><a class="btn btn-lg btn-primary" href="#">Sign up today</a></p>
+            <p><a class="btn btn-lg btn-primary" href="#">En saavoir plus ...</a></p>
           </div>
         </div>
       </div>
@@ -71,9 +71,9 @@ background-repeat: no-repeat; background-position: center center; background-siz
         <%= image_tag("emission2.jpg", alt: "emission", class: "bd-placeholder-img w-100 h-100" ) %>
         <div class="container">
           <div class="carousel-caption">
-            <h1>Another example headline.</h1>
+            <h1>Emission headline.</h1>
             <p>Some representative placeholder content for the second slide of the carousel.</p>
-            <p><a class="btn btn-lg btn-primary" href="#">Learn more</a></p>
+            <p><a class="btn btn-lg btn-primary" href="#">En savoir plus ...</a></p>
           </div>
         </div>
       </div>
@@ -82,9 +82,9 @@ background-repeat: no-repeat; background-position: center center; background-siz
         <%= image_tag("emission.jpg", alt: "emission", class: "bd-placeholder-img w-100 h-100" ) %>
         <div class="container">
           <div class="carousel-caption text-end">
-            <h1>One more for good measure.</h1>
+            <h1>Emission headline.</h1>
             <p>Some representative placeholder content for the third slide of this carousel.</p>
-            <p><a class="btn btn-lg btn-primary" href="#">Browse gallery</a></p>
+            <p><a class="btn btn-lg btn-primary" href="#">En savoir plus ...</a></p>
           </div>
         </div>
       </div>
