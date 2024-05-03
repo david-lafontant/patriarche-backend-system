@@ -1,7 +1,9 @@
 // body:has(#home-view) {
 //   background-color: #ffa500;
 // }
-
+section.home-sections {
+  min-height: 100vh;
+}
 
 body:has(#home-hero) {
   .divider-b {
@@ -72,7 +74,6 @@ body:has(#home-hero) {
 }
 
 #home-hero {
-  height: 100vh;
 
   .row {
     height: 100%;
@@ -86,6 +87,12 @@ body:has(#home-hero) {
     .button-89:focus-visible {
       outline-color: $snow;
       outline-offset: .06em;
+    }
+
+    .content {
+      display: flex;
+      flex-direction: column;
+      justify-content: baseline;
     }
   }
 }
