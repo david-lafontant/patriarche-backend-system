@@ -1,27 +1,45 @@
-<div id="<%= dom_id emission %>">
-  <p>
-    <strong>Title:</strong>
-    <%= emission.title %>
-  </p>
-  <p>
-    <strong>Description:</strong>
-    <%= emission.description %>
-  </p>
-  <p>
-    <strong>Poster:</strong>
-    <%= link_to emission.poster.filename, emission.poster if emission.poster.attached? %>
-  </p>
-  <%if emission.media %>
-    <h3>choucoune</h3>
-    <h1>les lilas</h1>
-    <ul>
-      <% emission.media.each do |item|%>
-        <li> <%= item.title %></li>
-      <% end %>
-    </ul>
-  <%end%>
-  <p>
-    <strong>User:</strong>
-    <%= emission.user_id %>
-  </p>
-</div>
+<section class="container fluid" id="<%= dom_id emission %>">
+  <div class="container col-xxl-8 px-4 py-5">
+    <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
+      <div class="col-10 col-sm-8 col-lg-6">
+        <%= image_tag(emission.poster, class: "d-block mx-lg-auto img-fluid",  size: "700x500", loading: "lazy" , alt: "Emission logo") %>
+      </div>
+      <div class="col-lg-6">
+        <h1 class="display-5 fw-bold text-body-emphasis lh-1 mb-3">    <%= emission.title %></h1>
+        <p class="lead">
+          <%= emission.description %>
+          <p>
+            Pr&eacute;senter par&nbsp;:&nbsp;<strong>
+              <%= emission.user_id %>  </strong>
+          </p>
+        </div>
+      </div>
+    </div>
+    <%if emission.media %>
+      <div class="album py-5 bg-body-tertiary">
+        <div class="container">
+          <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+            <% emission.media.each do |item|%>
+              <div class="col">
+                <div class="card shadow-sm">
+                  <%= image_tag(emission.poster, class: "card-img-top",  style: "width: 100%; height:225", loading: "lazy" , alt: "Emission logo") %>
+                  <div class="card-body">
+                    <p class="card-title"> <%= item.title %></p>
+                    <p class="card-text">
+                      <%= item.description %>
+                    </p>
+                    <div class="d-flex justify-content-between align-items-center">
+                      <%= audio_tag(url_for(item.content), controls: true)%>
+                    </div>
+                  </div>
+                  <div class="card-footer">
+                    <small class="text-body-secondary"><%= item.created_at %></small>
+                  </div>
+                </div>
+              </div>
+            <% end %>
+          </div>
+        </div>
+      </div>
+    <%end%>
+  </section>
