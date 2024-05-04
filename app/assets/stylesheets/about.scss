@@ -1,63 +1,98 @@
+section.about-sections {
+  min-height: 100vh;
+}
+
+
 #about-team {
-  .center {
+  color: #121213;
+  background-color: $snow;
+
+  p {
+    color: #0d0e0f;
+  }
+
+  h2 {
+    font-weight: bold;
+    margin-bottom: 40px;
+    padding-top: 40px;
+    color: inherit;
+  }
+
+  .intro {
+    font-size: 16px;
+    max-width: 500px;
+    margin: 0 auto;
+  }
+
+  .intro p {
+    margin-bottom: 0;
+  }
+
+  .people {
+    padding: 50px 0;
+  }
+
+  .item .box {
+    text-align: center;
+    padding: 30px;
+    background-color: $snow;
+    margin-bottom: 30px;
+  }
+
+  .item {
     text-align: center;
   }
 
-  #meet-the-team .designation {
-    margin-top: 5px;
-    display: block;
+  .item .title {
+    text-transform: uppercase;
+    font-weight: bold;
+    color: #110f0f;
+    letter-spacing: 2px;
     font-size: 13px;
   }
 
-  .img-thumbnail {
-    border: 0;
+  .item .name {
+    font-weight: bold;
+    margin-top: 28px;
+    margin-bottom: 8px;
+    color: inherit;
   }
 
-  .btn-social {
-    border: 0;
-    color: #fff;
-    border-radius: 100%;
+  .item .description {
+    font-size: 1.1rem;
+    margin-top: 15px;
+    margin-bottom: 20px;
+  }
+
+  .item img {
+    max-width: 150px;
+  }
+
+  .social {
+    font-size: 2rem;
+    color: $caribbean-current;
+  }
+
+  .social a {
+    color: inherit;
+    margin: 0 12px;
     display: inline-block;
-    width: 36px;
-    height: 36px;
-    line-height: 36px;
-    text-align: center;
-    padding: 0;
+    opacity: 0.7;
   }
 
-  .btn-social.btn-facebook {
-    background: #4f7dd4;
+  .social a:hover {
+    opacity: 1;
+    color: $oxford-blue;
   }
 
-  .btn-social.btn-facebook:hover {
-    background: #789bde;
-  }
+}
 
-  .btn-social.btn-twitter {
-    background: #5bceff;
-  }
 
-  .btn-social.btn-twitter:hover {
-    background: #8eddff;
-  }
 
-  .btn-social.btn-linkedin {
-    background: #21a6d8;
-  }
-
-  .btn-social.btn-linkedin:hover {
-    background: #49b9e3;
-  }
-
-  .btn-social.btn-instagram {
-    background: #dc422b;
-  }
-
-  .btn-social.btn-instagram:hover {
-    background: #e36957;
-  }
-
-  .btn-social:hover {
-    color: #fff;
+@media (max-width:767px) {
+  #about-team h2 {
+    margin-bottom: 1.5rem;
+    padding-top: 1.5rem;
+    font-size: 1.5rem;
   }
 }
