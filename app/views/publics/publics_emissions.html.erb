@@ -1,19 +1,26 @@
 <p style="color: green"><%= notice %></p>
-<h1>Emissions</h1>
-<div id="emissions">
+<section class="container-fluid p-5" id="emissions">
+  <h1>Emissions</h1>
   <% @les_emissions.each do |emission| %>
-    <h2><%= emission.title %></h2>
-    <p>
-      <strong>Description:</strong>
-      <%= emission.description %>
-    </p>
-    <p>
-      <strong>Poster:</strong>
-      <%= link_to emission.poster.filename, emission.poster if emission.poster.attached? %>
-    </p>
-    <p>
-      <%= link_to 'Voir plus ...', une_emission_path(emission) %>
-    </p>
+    <div class="card mb-3" style="max-width: 540px;">
+      <div class="row no-gutters">
+        <div class="col-md-4">
+          <%= image_tag(emission.poster, class: "card-img", alt: "Emission logo") %>
+        </div>
+        <div class="col-md-8">
+          <div class="card-body">
+            <h5 class="card-title"><%= emission.title %></h5>
+            <p class="card-text"><%= emission.description %></p>
+            <p>
+              <%= link_to 'Voir plus ...', une_emission_path(emission) %>
+            </p>
+          </div>
+          <div class="card-footer">
+            <p class="card-text"><small class="text-muted"><%= emission.created_at %></small></p>
+            <p class="card-text"><small class="text-muted"><%= emission.updated_at %></small></p>
+          </div>
+        </div>
+      </div>
+    </div>
   <% end %>
-  se bon an
-</div>
+</section>
