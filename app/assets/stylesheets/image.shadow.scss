@@ -1,0 +1,22 @@
+.poster_shadow {
+  position: relative;
+  width: 100%;
+  border-radius: 25px;
+}
+
+.poster_shadow:after {
+  z-index: -1;
+  content: "";
+  position: absolute;
+  -webkit-box-shadow: 0 0 2.5rem rgba(20, 20, 20, 0.8);
+  -moz-box-shadow: 0 0 2.5rem rgba(20, 20, 20, 0.8);
+  box-shadow: 0 0 2.5rem rgba(20, 20, 20, 0.8);
+  height: 20%;
+  left: 10%;
+  right: 10%;
+  width: 80%;
+  bottom: 0px;
+  -webkit-border-radius: 100%;
+  -moz-border-radius: 100%;
+  border-radius: 100%;
+}
