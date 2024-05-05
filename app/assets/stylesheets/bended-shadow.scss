@@ -1,0 +1,39 @@
+.thediv {
+  background: #eee;
+  border: 10px solid #fff;
+  // height: 150px;
+  // margin: 50px;
+  // width: 200px;
+}
+
+.bended-shadow {
+  box-bended-shadow: 0 1px 5px hsla(0, 0%, 0%, .25),
+    inset 0 0 50px hsla(0, 0%, 0%, .05);
+  position: relative;
+}
+
+.bended-shadow:after,
+.bended-shadow:before {
+  bottom: 7px;
+  box-bended-shadow: 0 10px 15px hsla(0, 0%, 0%, .25);
+  content: '';
+  height: 50%;
+  left: 7px;
+  max-width: 300px;
+  position: absolute;
+  right: 7px;
+  z-index: -1;
+  -webkit-transform: skew(-15deg) rotate(-8deg);
+  -moz-transform: skew(-15deg) rotate(-6deg);
+  -ms-transform: skew(-15deg) rotate(-6deg);
+  -o-transform: skew(-15deg) rotate(-6deg);
+  transform: skew(-15deg) rotate(-6deg);
+}
+
+.bended-shadow:after {
+  -webkit-transform: skew(15deg) rotate(8deg);
+  -moz-transform: skew(15deg) rotate(6deg);
+  -ms-transform: skew(15deg) rotate(6deg);
+  -o-transform: skew(15deg) rotate(6deg);
+  transform: skew(15deg) rotate(6deg);
+}
