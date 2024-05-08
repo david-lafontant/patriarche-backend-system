@@ -1,56 +1,95 @@
 // * Fixed/sticky icon bar (vertically aligned 50% from the top of the screen) */ 
 .icon-bar {
-  position: fixed;
-  top: 50%;
-  -webkit-transform: translateY(-50%);
-  -ms-transform: translateY(-50%);
-  transform: translateY(-50%);
-}
+  // position: fixed;
+  // top: 50%;
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  // flex-direction: column;
+  gap: 0.5rem;
+  // -webkit-transform: translateY(-50%);
+  // -ms-transform: translateY(-50%);
+  // transform: translateY(-50%);
+  background-color: transparent;
 
-/* Style the icon bar links */
-.icon-bar a {
-  display: block;
-  text-align: center;
-  padding: 16px;
-  transition: all 0.3s ease;
-  color: $snow;
-  font-size: 20px;
-}
+  a {
+    position: relative;
+    display: block;
+    text-align: center;
+    padding: 0.7rem;
+    transition: all 0.3s ease;
+    color: $snow;
+    font-size: 1.4rem;
+    border-radius: 20px;
+  }
 
-/* Style the social media icons with color, if you want */
-.icon-bar a:hover {
-  background-color: $oxford-blue;
-  color: $orange-web;
-}
+  a::before {
+    content: "";
+    background-color: $snow;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    border-radius: 20px;
+    z-index: -1;
+    transform: scale(0.9);
+    transition: 0.5s;
+  }
 
-.facebook {
-  background: #1877f2;
-  color: $snow;
-}
+  a:hover::before {
+    transform: scale(1.2);
+    filter: blur(3px);
+    box-shadow: 0 0 1rem $snow;
 
-.twitter {
-  background: #1da1f2;
-  color: $snow;
-}
+  }
 
-.instagram {
-  background: #d6249f;
-  background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
-  color: $snow;
-}
+  a.facebook {
+    background: #1877f2;
+    color: $snow;
+  }
 
-.linkedin {
-  background: #0072b1;
-  color: $snow;
-}
+  a.twitter {
+    background: #1da1f2;
+    color: $snow;
+  }
 
-.youtube {
-  background: #ff0000;
-  color: $snow;
-}
+  a.instagram {
+    background: #d6249f;
+    background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
+    color: $snow;
+  }
 
-.instagram :hover {
-  background: $oxford-blue;
-  background: radial-gradient(circle at 30% 107%, $oxford-blue 0%, $oxford-blue 5%, $oxford-blue 45%, $oxford-blue 60%, $oxford-blue 90%);
-  color: $orange-web;
+  a.linkedin {
+    background: #0072b1;
+    color: $snow;
+  }
+
+  a.youtube {
+    background: #ff0000;
+    color: $snow;
+  }
+
+  a.phone {
+    background: #00ff00;
+    color: $snow;
+  }
+
+  a.email {
+    background: #2600ff;
+    color: $snow;
+  }
+
+  a:hover {
+    background: $oxford-blue !important;
+
+    font-size: 1.6rem;
+
+    i {
+      font-weight: 600;
+      color: $snow;
+    }
+  }
+
 }
