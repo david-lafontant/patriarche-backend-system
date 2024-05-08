@@ -87,6 +87,23 @@ body:has(#home-hero) {
         color: $snow;
       }
 
+      h1 {
+        font-size: 1.5rem;
+        background: -webkit-linear-gradient(rgb(245, 209, 4), #fbf5f3ff, rgb(243, 167, 3));
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+
+      .lead {
+        font-size: 3.5rem;
+        font-weight: bold;
+        background: -webkit-linear-gradient(rgb(145, 123, 2), rgb(253, 251, 250), rgb(243, 167, 3));
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+
       .button-89:hover,
       .button-89:focus-visible {
         outline-color: $snow;
