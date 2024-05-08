@@ -1,11 +1,11 @@
 <p style="color: green"><%= notice %></p>
-<section class="container-fluid p-5" id="emissions">
+<section class="container-fluid p-5 mt-5" id="emissions-page">
   <h1>Emissions</h1>
   <% @les_emissions.each do |emission| %>
-    <div class="card mb-3" style="max-width: 540px;">
+    <div class="card mb-3 bended-shadow" style="max-width: 540px;">
       <div class="row no-gutters">
         <div class="col-md-4">
-          <%= image_tag(emission.poster, class: "card-img", alt: "Emission logo") %>
+          <%= image_tag(emission.poster, class: "card-image", alt: "#{emission.title} logo") %>
         </div>
         <div class="col-md-8">
           <div class="card-body">
