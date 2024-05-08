@@ -1,0 +1,16 @@
+body:has(#contact-page) {
+  min-height: 100dvh;
+  background-color: $caribbean-current;
+  color: $snow;
+}
+
+#contact-page {
+  form {
+    background: $gradient-top-left;
+
+    label {
+      color: $caribbean-current;
+      font-size: 1.2rem;
+    }
+  }
+}
