@@ -1,7 +1,22 @@
+body:has(#about-statement) {
+  background-color: $caribbean-current;
+}
+
+
+
 section.about-sections {
   min-height: 100vh;
 }
 
+
+#about-statement {
+  h1 {
+    background: -webkit-linear-gradient(#0a122aff, #fbf5f3ff, #156064ff);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+}
 
 #about-team {
   color: #121213;
