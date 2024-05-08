@@ -1,13 +1,16 @@
-<section class="container col-xl-10 col-xxl-8 px-4 py-5 mt-5">
+<section class="container col-xl-10 col-xxl-8 px-4 py-5 mt-5" id="contact-page">
+  <div class="row align-items-center g-lg-2 py-2">
+    <h1 class="display-4 fw-bold text-center lh-1 text-body-emphasis">Contactez-nous</h1>
+    <p class="text-center fs-4">
+      Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Pellentesque et neque id ligula mattis commodo.
+    </p>
+  </div>
   <div class="row align-items-center g-lg-5 py-5">
-    <div class="col-lg-7 text-center text-lg-start px-4">
-      <div class="poster_shadow">
+    <div class="col-lg-7 align-self-start text-center text-lg-start px-4 mb-3">
+      <%= render "shared/public_social" %>
+      <div class="poster_shadow mt-3 d-none d-md-block">
         <%= image_tag 'logo.jpg', style: "width:100%; height: auto" , class: "card-image", alt: "logo" %>
       </div>
-      <h1 class="display-4 fw-bold lh-1 text-body-emphasis my-3">Contactez-nous</h1>
-      <p class="col-lg-10 fs-4 ">
-        Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Pellentesque et neque id ligula mattis commodo.
-      </p>
     </div>
     <div class="col-md-10 mx-auto col-lg-5">
       <%= form_with scope: :contact_form, url: contact_form_index_path, method: :post, local: true, class: "p-4 p-md-5 border rounded-3 bg-body-tertiary" do |form| %>
