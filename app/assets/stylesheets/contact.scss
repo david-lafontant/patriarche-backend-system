@@ -5,6 +5,13 @@ body:has(#contact-page) {
 }
 
 #contact-page {
+  h1 {
+    background: -webkit-linear-gradient(#0a122aff, #fbf5f3ff, #156064ff);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
   form {
     background: $gradient-top-left;
 
