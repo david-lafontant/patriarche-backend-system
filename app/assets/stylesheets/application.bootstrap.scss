@@ -1,12 +1,18 @@
 @import 'bootstrap/scss/bootstrap';
 @import 'bootstrap-icons/font/bootstrap-icons';
-@import './colors.scss';
-@import './about.scss';
+@import './palette.scss';
+@import './public.header.scss';
+@import './buttons.scss';
 @import './home.scss';
-@import './public.footer.scss';
-@import './public.navigation.scss';
+@import './about.scss';
+@import './public_social.scss';
+@import './footer.scss';
+@import './posted-article.scss';
+@import './image.shadow.scss';
+@import './bended-shadow.scss';
 @import './contact.scss';
-
-body:has(#home-view) {
-  background-color: #ffa500;
-}
+@import './articles-page.scss';
+@import './emissions-pages.scss';
+@import './emission.scss';
+@import './header-glass.scss';
+@import './misc.scss';

@@ -1,9 +1,26 @@
-/* From https://css.glass */
-.gls {
-  background: rgba(255, 238, 2, 0.2);
-  border-radius: 16px;
-  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-  backdrop-filter: blur(5px);
-  -webkit-backdrop-filter: blur(5px);
-  border: 1px solid rgba(255, 255, 255, 0.3);
+/* stylelint-disable no-missing-end-of-source-newline */
+body:has(#contact-page) {
+  min-height: 100vh;
+  background-color: $caribbean-current;
+  color: $snow;
+}
+
+#contact-page {
+  h1 {
+    background: -webkit-linear-gradient(#0a122aff, #fbf5f3ff, #156064ff);
+    /* stylelint-disable */
+    background-clip: text;
+    /* stylelint-enable */
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  form {
+    background: $gradient-top-left;
+
+    label {
+      color: $caribbean-current;
+      font-size: 1.2rem;
+    }
+  }
 }

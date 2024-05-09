@@ -1,0 +1,29 @@
+.thediv {
+  background: #eee;
+  border: 10px solid #fff;
+}
+
+.bended-shadow {
+  position: relative;
+  width: 90%;
+}
+
+.bended-shadow::before,
+.bended-shadow::after {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  bottom: 15px;
+  left: 10px;
+  width: 50%;
+  height: 20%;
+  max-width: 300px;
+  box-shadow: 0 15px 10px rgba(0, 0, 0, 0.7);
+  transform: rotate(-10deg);
+}
+
+.bended-shadow::after {
+  right: 10px;
+  left: auto;
+  transform: rotate(10deg);
+}

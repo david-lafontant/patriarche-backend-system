@@ -1,0 +1,18 @@
+body:has(#articles-page) {
+  background: $gradient-top-left;
+}
+
+#articles-page {
+  min-height: 100%;
+  width: 100%;
+
+  h1 {
+    color: $snow;
+  }
+
+  .card-image {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+  }
+}

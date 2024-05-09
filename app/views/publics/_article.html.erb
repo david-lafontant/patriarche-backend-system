@@ -1,62 +1,80 @@
-<div class="container" id="<%= dom_id article %>">
+<section class="container py-5" id="<%= dom_id article %>">
   <div class="row">
-    <div class="col">
-      <p>
-        <strong>Title:</strong>
-        <%= article.title %>
-      </p>
-      <h1>les lilas</h1>
-      <p>
-        <strong>Description:</strong>
-        <%= article.description %>
-      </p>
-      <h1>les lilas</h1>
+    <div class="col-8 mx-auto">
+      <article class="posted-article">
+        <h1>
+          <%= article.title %>
+        </h1>
+        <h2>
+          <%= article.subltitle %>
+        </h2>
+        <% if article.contents.attached?  %>
+          <%if article.contents[0].image?%>
+            <figure>
+              <%= image_tag(article.contents[0], class: "image", alt: "Card image cap") %>
+              <figcaption><%= article.description %></figcaption>
+            </figure>
+          <%end%>
+        <%end%>
+        <p>
+          <%= article.contenu %>
+        </p>
+        <p>
+          <%= article.user.name %>
+        </p>
+      </article>
     </div>
   </div>
   <% if article.contents.attached? %>
-    <div class="row">
-      <div class="col">
-        <strong>Contents:</strong>
-        <% article.contents.each do |content| %>
-          <%if content.image?%>
-            <div class="card" style="width: 18rem;">
-              <%= image_tag(content, class: "card-img-top", alt: "Card image cap") %>
-              <div class="card-body">
-                <h5 class="card-title"><%= content.filename %></h5>
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+    <div class="album py-5 bg-body-tertiary">
+      <div class="container">
+        <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+          <% article.contents.each do |content| %>
+            <%if content.image?%>
+              <div class="col">
+                <div class="card shadow-sm">
+                  <div class="card-body">
+                    <%= image_tag(content, class: "card-img-top", alt: "Card image cap") %>
+                  </div>
+                </div>
               </div>
             <%elsif content.video?%>
-              <div>
-                <video
+              <div class="col">
+                <div class="card shadow-sm">
+                  <div class="card-body">
+                    <video
             controls
             muted
             src="<%= rails_blob_url(content) %>"
-            width="620" type="<%= content.content_type%>">
-                  Sorry, your browser doesn't support embedded videos, but don't worry, you can
-                  <a href="https://archive.org/details/BigBuckBunny_124">download it</a>
-                  and watch it with your favorite video player!
-                </video>
+            width="100%" type="<%= content.content_type%>">
+                      Sorry, your browser doesn't support embedded videos, but don't worry, you can
+                      <a href="https://archive.org/details/BigBuckBunny_124">download it</a>
+                      and watch it with your favorite video player!
+                    </video>
+                  </div>
+                </div>
               </div>
             <%elsif content.audio?%>
-              <div>
-                <%= audio_tag(url_for(content), controls: true)%>
+              <div class="col">
+                <div class="card shadow-sm">
+                  <div class="card-body">
+                    <%= audio_tag(url_for(content), controls: true)%>
+                  </div>
+                </div>
               </div>
             <%else%>
-              <div>
-                <p class="btn btn-primary">
-                  <span class="badge badge-light">
+              <div class="col">
+                <div class="card shadow-sm">
+                  <div class="card-body">
                     <%= link_to content.filename, content %>
-                  </span>
+                    <%= link_to "Download link", content %>
+                  </div>
                 </div>
-              </p>
+              </div>
             <%end%>
           <% end %>
         </div>
       </div>
-    <%end%>
-    <p>
-      <strong>User:</strong>
-      <%= article.user.name %>
-    </p>
-    se bon an
-  </div>
+    </div>
+  <%end%>
+</section>
