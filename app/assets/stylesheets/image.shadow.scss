@@ -4,7 +4,7 @@
   border-radius: 25px;
 }
 
-.poster_shadow:after {
+.poster_shadow::after {
   z-index: -1;
   content: "";
   position: absolute;
@@ -15,7 +15,7 @@
   left: 10%;
   right: 10%;
   width: 80%;
-  bottom: 0px;
+  bottom: 0;
   -webkit-border-radius: 100%;
   -moz-border-radius: 100%;
   border-radius: 100%;

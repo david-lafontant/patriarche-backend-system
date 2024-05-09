@@ -1,5 +1,6 @@
+/* stylelint-disable no-missing-end-of-source-newline */
 body:has(#contact-page) {
-  min-height: 100dvh;
+  min-height: 100vh;
   background-color: $caribbean-current;
   color: $snow;
 }
@@ -7,7 +8,9 @@ body:has(#contact-page) {
 #contact-page {
   h1 {
     background: -webkit-linear-gradient(#0a122aff, #fbf5f3ff, #156064ff);
+    /* stylelint-disable */
     background-clip: text;
+    /* stylelint-enable */
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
   }

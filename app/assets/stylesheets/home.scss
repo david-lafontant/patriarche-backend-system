@@ -1,3 +1,4 @@
+/* stylelint-disable no-missing-end-of-source-newline */
 body:has(#home-hero) {
   background-color: $caribbean-current;
 
@@ -12,10 +13,10 @@ body:has(#home-hero) {
   .divider-b {
     width: 100%;
     height: 3rem;
-    background-color: rgba(0, 0, 0, .1);
-    border: solid rgba(0, 0, 0, .15);
+    background-color: rgba(0, 0, 0, 0.1);
+    border: solid rgba(0, 0, 0, 0.15);
     border-width: 1px 0;
-    box-shadow: inset 0 .5em 1.5em rgba(0, 0, 0, .1), inset 0 .125em .5em rgba(0, 0, 0, .15);
+    box-shadow: inset 0 0.5em 1.5em rgba(0, 0, 0, 0.1), inset 0 0.125em 0.5em rgba(0, 0, 0, 0.15);
   }
 
   .bd-placeholder-img {
@@ -56,8 +57,6 @@ body:has(#home-hero) {
 -------------------------------------------------- */
 
   @media (min-width: 40em) {
-
-    /* Bump up size of carousel content */
     .carousel-caption p {
       margin-bottom: 1.25rem;
       font-size: 1.25rem;
@@ -75,7 +74,45 @@ body:has(#home-hero) {
     }
   }
 
+  #home-about {
+    .shadow {
+      box-shadow:
+        0 1px 5px hsla(0, 0%, 0%, 0.25),
+        inset 0 0 50px hsla(0, 0%, 0%, 0.05);
+      position: relative;
+    }
 
+    .content {
+      width: 70%;
+      margin: 0 auto;
+    }
+
+    .shadow::after,
+    .shadow::before {
+      bottom: 7px;
+      box-shadow: 0 10px 15px hsla(0, 0%, 0%, 0.25);
+      content: '';
+      height: 50%;
+      left: 7px;
+      max-width: 300px;
+      position: absolute;
+      right: 7px;
+      z-index: -1;
+      -webkit-transform: skew(-15deg) rotate(-8deg);
+      -moz-transform: skew(-15deg) rotate(-6deg);
+      -ms-transform: skew(-15deg) rotate(-6deg);
+      -o-transform: skew(-15deg) rotate(-6deg);
+      transform: skew(-15deg) rotate(-6deg);
+    }
+
+    .shadow::after {
+      -webkit-transform: skew(15deg) rotate(8deg);
+      -moz-transform: skew(15deg) rotate(6deg);
+      -ms-transform: skew(15deg) rotate(6deg);
+      -o-transform: skew(15deg) rotate(6deg);
+      transform: skew(15deg) rotate(6deg);
+    }
+  }
 
   #home-hero {
     // align-items: flex-start;
@@ -92,7 +129,9 @@ body:has(#home-hero) {
       h1 {
         font-size: 1.5rem;
         background: -webkit-linear-gradient(rgb(245, 209, 4), #fbf5f3ff, rgb(243, 167, 3));
+        /* stylelint-disable */
         background-clip: text;
+        /* stylelint-enable */
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
       }
@@ -101,7 +140,9 @@ body:has(#home-hero) {
         font-size: 3.5rem;
         font-weight: bold;
         background: -webkit-linear-gradient(rgb(145, 123, 2), rgb(253, 251, 250), rgb(243, 167, 3));
+        /* stylelint-disable */
         background-clip: text;
+        /* stylelint-enable */
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
       }
@@ -109,13 +150,13 @@ body:has(#home-hero) {
       .button-89:hover,
       .button-89:focus-visible {
         outline-color: $snow;
-        outline-offset: .06em;
+        outline-offset: 0.06em;
       }
 
       .content {
         display: flex;
         flex-direction: column;
-        justify-content: baseline;
+        justify-content: flex-end;
       }
     }
   }
@@ -123,44 +164,5 @@ body:has(#home-hero) {
   #home-direct {
     background-color: $snow;
     color: $oxford-blue;
-  }
-
-  #home-about {
-    .shadow {
-      box-shadow: 0 1px 5px hsla(0, 0%, 0%, .25),
-        inset 0 0 50px hsla(0, 0%, 0%, .05);
-      position: relative;
-    }
-
-    .content {
-      width: 70%;
-      margin: 0 auto;
-    }
-
-    .shadow:after,
-    .shadow:before {
-      bottom: 7px;
-      box-shadow: 0 10px 15px hsla(0, 0%, 0%, .25);
-      content: '';
-      height: 50%;
-      left: 7px;
-      max-width: 300px;
-      position: absolute;
-      right: 7px;
-      z-index: -1;
-      -webkit-transform: skew(-15deg) rotate(-8deg);
-      -moz-transform: skew(-15deg) rotate(-6deg);
-      -ms-transform: skew(-15deg) rotate(-6deg);
-      -o-transform: skew(-15deg) rotate(-6deg);
-      transform: skew(-15deg) rotate(-6deg);
-    }
-
-    .shadow:after {
-      -webkit-transform: skew(15deg) rotate(8deg);
-      -moz-transform: skew(15deg) rotate(6deg);
-      -ms-transform: skew(15deg) rotate(6deg);
-      -o-transform: skew(15deg) rotate(6deg);
-      transform: skew(15deg) rotate(6deg);
-    }
   }
 }

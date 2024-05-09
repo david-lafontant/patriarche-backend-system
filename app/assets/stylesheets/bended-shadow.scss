@@ -8,8 +8,8 @@
   width: 90%;
 }
 
-.bended-shadow:before,
-.bended-shadow:after {
+.bended-shadow::before,
+.bended-shadow::after {
   content: "";
   position: absolute;
   z-index: -1;
@@ -22,7 +22,7 @@
   transform: rotate(-10deg);
 }
 
-.bended-shadow:after {
+.bended-shadow::after {
   right: 10px;
   left: auto;
   transform: rotate(10deg);

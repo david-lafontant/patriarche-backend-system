@@ -4,7 +4,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  min-height: 100dvh;
+  min-height: 100vh;
   gap: 2rem;
 
   h1,
@@ -18,14 +18,12 @@
     letter-spacing: 0.2rem;
     font-weight: 700;
     line-height: 1.7rem;
-
   }
 
   h2 {
     letter-spacing: 0.1rem;
     font-weight: 400;
     line-height: 1.4rem;
-
   }
 
   figure {
@@ -42,7 +40,6 @@
       color: rgb(67, 70, 69);
       text-align: center;
       width: 100%;
-
     }
   }
 
