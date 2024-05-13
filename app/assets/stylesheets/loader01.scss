@@ -2,7 +2,7 @@
 .loader01 {
   --s: 5rem;
   --g: 1rem;
-
+  /* stylelint-disable */
   width: calc(2*(1.353*var(--s) + var(--g)));
   aspect-ratio: 1;
   background:
@@ -24,6 +24,7 @@
   animation: l9 2.5s infinite;
 }
 
+/* stylelint-enable */
 @keyframes l9 {
 
   0%,
