@@ -1,34 +1,46 @@
 <section class="container-fluid py-5" id="articles-page">
   <p style="color: green"><%= notice %></p>
   <div class="container py-5">
-    <h1>Articles</h1>
-    <div id="articles">
+    <% if @les_articles1 && !@les_articles.empty? %>
+      <h1>Articles</h1>
       <% @les_articles.each do |article| %>
-        <div class="card mb-3">
-          <div class="row no-gutters">
-            <div class="col-md-4">
-              <% if article.contents.attached?  %>
-                <%if article.contents[0].image?%>
-                  <%= image_tag(article.contents[0], class: "card-image", alt: "article image") %>
+        <div id="articles">
+          <div class="card mb-3">
+            <div class="row no-gutters">
+              <div class="col-md-4">
+                <% if article.contents.attached?  %>
+                  <%if article.contents[0].image?%>
+                    <%= image_tag(article.contents[0], class: "card-image", alt: "article image") %>
+                  <%end%>
                 <%end%>
-              <%end%>
-            </div>
-            <div class="col-md-8">
-              <div class="card-body">
-                <h5 class="card-title"><%= article.title %></h5>
-                <p class="card-text"><%= article.description %></p>
-                <p>
-                  <%= link_to 'Voir plus ...', un_article_path(article) %>
-                </p>
               </div>
-              <div class="card-footer">
-                <p class="card-text">Post&eacute;&nbsp;le&nbsp;<small class="text-muted"><%= article.created_at %></small></p>
-                <p class="card-text">Modifi&eacute;&nbsp;le&nbsp;<small class="text-muted"><%= article.updated_at %></small></p>
+              <div class="col-md-8">
+                <div class="card-body">
+                  <h5 class="card-title"><%= article.title %></h5>
+                  <p class="card-text"><%= article.description %></p>
+                  <p>
+                    <%= link_to 'Voir plus ...', un_article_path(article) %>
+                  </p>
+                </div>
+                <div class="card-footer">
+                  <p class="card-text">Post&eacute;&nbsp;le&nbsp;<small class="text-muted"><%= article.created_at %></small></p>
+                  <p class="card-text">Modifi&eacute;&nbsp;le&nbsp;<small class="text-muted"><%= article.updated_at %></small></p>
+                </div>
               </div>
             </div>
           </div>
         </div>
       <% end %>
-    </div>
+    <%else%>
+      <div class="bg-transparent text-secondary px-4 py-5 text-center">
+        <div class="py-5">
+          <h1 class="display-5 fw-bold text-white">Articles</h1>
+          <div class="col-lg-6 mx-auto d-flex flex-column justify-content-center align-items-center gap-4">
+            <p class="fs-5 mb-4 text-white">Articles indisponibles pour le temporairement. Veuillez profiter de nos &eacute;missions. Bonne &eacute;coute.</p>
+            <%= render "shared/loader01"%>
+          </div>
+        </div>
+      </div>
+    <%end%>
   </div>
 </section>
