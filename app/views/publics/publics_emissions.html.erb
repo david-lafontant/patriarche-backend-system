@@ -1,26 +1,37 @@
 <p style="color: green"><%= notice %></p>
 <section class="container-fluid p-5 mt-5" id="emissions-page">
-  <h1>Emissions</h1>
-  <% @les_emissions.each do |emission| %>
-    <div class="card mb-3 bended-shadow" style="max-width: 540px;">
-      <div class="row no-gutters">
-        <div class="col-md-4">
-          <%= image_tag(emission.poster, class: "card-image", alt: "#{emission.title} logo") %>
-        </div>
-        <div class="col-md-8">
-          <div class="card-body">
-            <h5 class="card-title"><%= emission.title %></h5>
-            <p class="card-text"><%= emission.description %></p>
-            <p>
-              <%= link_to 'Voir plus ...', une_emission_path(emission) %>
-            </p>
+  <% if @les_emissions && !@les_emissions.empty? %>
+    <h1>Emissions</h1>
+    <% @les_emissions.each do |emission| %>
+      <div class="card mb-3 bended-shadow" style="max-width: 540px;">
+        <div class="row no-gutters">
+          <div class="col-md-4">
+            <%= image_tag(emission.poster, class: "card-image", alt: "#{emission.title} logo") %>
           </div>
-          <div class="card-footer">
-            <p class="card-text"><small class="text-muted"><%= emission.created_at %></small></p>
-            <p class="card-text"><small class="text-muted"><%= emission.updated_at %></small></p>
+          <div class="col-md-8">
+            <div class="card-body">
+              <h5 class="card-title"><%= emission.title %></h5>
+              <p class="card-text"><%= emission.description %></p>
+              <p>
+                <%= link_to 'Voir plus ...', une_emission_path(emission) %>
+              </p>
+            </div>
+            <div class="card-footer">
+              <p class="card-text"><small class="text-muted"><%= emission.created_at %></small></p>
+              <p class="card-text"><small class="text-muted"><%= emission.updated_at %></small></p>
+            </div>
           </div>
         </div>
       </div>
-    </div>
-  <% end %>
-</section>
+    <%else%>
+      <div class="bg-transparent text-secondary px-4 py-5 text-center">
+        <div class="py-5">
+          <h1 class="display-5 fw-bold text-white">Emissions</h1>
+          <div class="col-lg-6 mx-auto d-flex flex-column justify-content-center align-items-center gap-4">
+            <p class="fs-5 mb-4 text-white">Emissions indisponibles pour le temporairement. Veuillez profiter du Live. Bonne &eacute;coute.</p>
+            <%= render "shared/loader01"%>
+          </div>
+        </div>
+      </div>
+    <% end %>
+  </section>
