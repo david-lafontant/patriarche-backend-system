@@ -1,6 +1,8 @@
-<p style="color: green"><%= notice %></p>
+<% if notice %>
+  <p style="color: green"><%= notice %></p>
+<% end %>
 <section class="container-fluid p-5 mt-5" id="emissions-page">
-  <% if @les_emissions && !@les_emissions.empty? %>
+  <% if @les_emissions.present? && !@les_emissions.empty? %>
     <h1>Emissions</h1>
     <% @les_emissions.each do |emission| %>
       <div class="card mb-3 bended-shadow" style="max-width: 540px;">
@@ -23,15 +25,16 @@
           </div>
         </div>
       </div>
-    <%else%>
-      <div class="bg-transparent text-secondary px-4 py-5 text-center">
-        <div class="py-5">
-          <h1 class="display-5 fw-bold text-white">Emissions</h1>
-          <div class="col-lg-6 mx-auto d-flex flex-column justify-content-center align-items-center gap-4">
-            <p class="fs-5 mb-4 text-white">Emissions indisponibles pour le temporairement. Veuillez profiter du Live. Bonne &eacute;coute.</p>
-            <%= render "shared/loader01"%>
-          </div>
+    <%end%>
+  <%else%>
+    <div class="bg-transparent text-secondary px-4 py-5 text-center">
+      <div class="py-5">
+        <h1 class="display-5 fw-bold text-white">Emissions</h1>
+        <div class="col-lg-6 mx-auto d-flex flex-column justify-content-center align-items-center gap-4">
+          <p class="fs-5 mb-4 text-white">Emissions indisponibles pour le temporairement. Veuillez profiter du Live. Bonne &eacute;coute.</p>
+          <%= render "shared/loader01"%>
         </div>
       </div>
-    <% end %>
-  </section>
+    </div>
+  <% end %>
+</section>
